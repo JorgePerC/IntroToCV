@@ -1,5 +1,5 @@
 # IntroToCV
-Files to learn CV, for the moment, only in Python
+Files to learn CV, for the moment, only in Python.
 
 
 So... I'm really new to this.
