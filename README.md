@@ -1,8 +1,9 @@
 # IntroToCV
 Files to learn CV, for the moment, only in Python.
 
-
 So... I'm really new to this.
+
+*Remember* to activate your venv
 
 ## Topics I should learn: 
 
@@ -29,9 +30,12 @@ https://0-eds-a-ebscohost-com.biblioteca-ils.tec.mx/eds/detail/detail?vid=0&sid=
 
 ### Links that have helped me:
 
+* How to prepare Jetson (TRUE PAIN IN THE ASS): https://www.pyimagesearch.com/2020/03/25/how-to-configure-your-nvidia-jetson-nano-for-computer-vision-and-deep-learning/
+
 * How to use VIM: https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
 
+* What is a VEM: https://realpython.com/python-virtual-environments-a-primer/
 
 * Program to get camera pipeline: https://github.com/JetsonHacksNano/CSI-Camera
 
-
+* Numpy: https://forums.developer.nvidia.com/t/scipy-not-getting-installed-on-jetson-nano-inspite-of-all-dependencies/110034
