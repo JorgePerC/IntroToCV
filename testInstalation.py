@@ -1,6 +1,6 @@
 import cv2
 import imutils
-image = cv2.imread("penguins.jpg")
+image = cv2.imread("imgs/penguins.jpg")
 image = imutils.resize(image, width=400)
 message = "OpenCV Jetson Nano Success!"
 font = cv2.FONT_HERSHEY_SIMPLEX
