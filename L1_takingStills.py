@@ -47,9 +47,8 @@ capture.set(10, 500)
 
 # cap.set(n,n2) is not working, use 
 # gstreamer arguments
-capture = cv2.VideoCapture(gstreamer_pipeline(framerate=10, display_width = 640,
-            display_height =  480 ,flip_method=0), cv2.CAP_GSTREAMER)
-
+capture = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
+        #framerate=10, display_width = 640, display_height =  480
 
 
 while True:

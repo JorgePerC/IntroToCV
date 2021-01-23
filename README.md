@@ -10,11 +10,18 @@ So... I'm really new to this.
 - [x] Python, objects
 - [x] Python, list comprenhension
 - [x] Python, Generators
+- [] Whats a mask
+- [] Whats a kernel
 - [] Color spaces
 - [] Convolutions
 - [] Filters
 - [] Leonardo Chang
 - [] Sistemas embebidos (C++)
+
+### Math:
+
+- [] Even more matrix
+- [] Used funcitons (Canny, Gaussian blur etc. )
 
 ## Bibliography
 
@@ -42,6 +49,9 @@ https://0-eds-a-ebscohost-com.biblioteca-ils.tec.mx/eds/detail/detail?vid=0&sid=
 
 * Numpy: https://forums.developer.nvidia.com/t/scipy-not-getting-installed-on-jetson-nano-inspite-of-all-dependencies/110034
 
+* YT video: https://www.youtube.com/watch?v=WQeoO7MI0Bs
+
+* Standford playlist: https://youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
 
 ## What I learned from *vimtutor*:
 

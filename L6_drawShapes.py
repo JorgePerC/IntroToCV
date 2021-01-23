@@ -10,7 +10,7 @@ img = np.zeros((500,500,3), np.uint8)
 #Draw Lines
 cv2.line(img, (50,50), (200,300), (125,125,0), 2) #Green-ish
 
-#TO get dimentions, you would do:
+#To get dimentions, you would do:
 width = img.shape[1]
 height = img.shape[0]
 
