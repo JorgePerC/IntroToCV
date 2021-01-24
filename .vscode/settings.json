@@ -1,5 +1,4 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.pythonPath": "/home/jorgeperc/.virtualenvs/cvIntro/bin/python"
+    "python.linting.enabled": true
 }

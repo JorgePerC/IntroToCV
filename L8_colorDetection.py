@@ -27,7 +27,6 @@ def stackImages(scale,imgArray):
                 if len(imgArray[x][y].shape) == 2: imgArray[x][y]= cv2.cvtColor( imgArray[x][y], cv2.COLOR_GRAY2BGR)
         imageBlank = np.zeros((height, width, 3), np.uint8)
         hor = [imageBlank]*rows
-        hor_con = [imageBlank]*rows
         for x in range(0, rows):
             hor[x] = np.hstack(imgArray[x])
         ver = np.vstack(hor)
@@ -46,7 +45,7 @@ imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
 # Create another window with sliders
 cv2.namedWindow("Sliders")
-cv2.resizeWindow("Sliders", 300, 100)
+# cv2.resizeWindow("Sliders", 300, 100)
                                     # Normaly in Hue there are 
                                     # 360, but cv2 gets to 180
                                     #Args are default and max vals
@@ -77,10 +76,11 @@ while True:
     imgRes = cv2.bitwise_and(img, img, mask= mask)
 
     # Show imgs
-    jointIMgs = stackImages(1, ([img,imgHSV], [mask, imgRes]))
-    cv2.imshow("Results", jointIMgs)
+    jointImgs = stackImages(1, ([img,imgHSV], [mask, imgRes]))
+    cv2.imshow("Results", jointImgs)
 
 
-    # Just to wait 1 mlsnd
-    cv2.waitKey(1)
+    # Just to wait 1 mlsnd and maybe exit with ESC
+    if cv2.waitKey(1) & 0xFF == 27:
+        break
 cv2.destroyAllWindows()

@@ -21,7 +21,7 @@ So... I'm really new to this.
 ### Math:
 
 - [] Even more matrix
-- [] Used funcitons (Canny, Gaussian blur etc. )
+- [] Used funcitons (Canny, Gaussian blur , Hanning, etc. )
 
 ## Bibliography
 
