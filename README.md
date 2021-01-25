@@ -12,6 +12,7 @@ So... I'm really new to this.
 - [x] Python, Generators
 - [] Whats a mask
 - [] Whats a kernel
+- [] Whats a cascade. pther methods to detect faces
 - [] Color spaces
 - [] Convolutions
 - [] Filters
