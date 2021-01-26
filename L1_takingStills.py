@@ -35,7 +35,7 @@ def gstreamer_pipeline(
 # It will automatically connecto to the main one if number 0
 # If several cameras, just increment by one to find the desired one
 
-capture = cv2.VIdeoCapture(0) 
+capture = cv2.VideoCapture(0) 
 
 #To set video dimentions
 capure.set(3,640)
@@ -59,5 +59,3 @@ while True:
     if keyCode == 27:
         break
 cv2.destroyAllWindows()
-
-# TODO: Add button and take photo

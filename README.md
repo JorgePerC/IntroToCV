@@ -12,7 +12,8 @@ So... I'm really new to this.
 - [x] Python, Generators
 - [] Whats a mask
 - [] Whats a kernel
-- [] Whats a cascade. pther methods to detect faces
+- [] Whats a cascade. pther methods to detect faces.
+- [] Whats a pipeline, from a reliable source. 
 - [] Color spaces
 - [] Convolutions
 - [] Filters
@@ -50,9 +51,14 @@ https://0-eds-a-ebscohost-com.biblioteca-ils.tec.mx/eds/detail/detail?vid=0&sid=
 
 * Numpy: https://forums.developer.nvidia.com/t/scipy-not-getting-installed-on-jetson-nano-inspite-of-all-dependencies/110034
 
-* YT video: https://www.youtube.com/watch?v=WQeoO7MI0Bs
+* YT video (Learn OpenCV in 3 hours): https://www.youtube.com/watch?v=WQeoO7MI0Bs
 
 * Standford playlist: https://youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+
+* Prof Octavio's class: https://github.com/octavio-navarro/Vision_2020_02
+
+* YT Playlist of my own: https://youtube.com/playlist?list=PLQ7SND1z6ymNsOQjLyMNt2rYjK15USyin
+
 
 ## What I learned from *vimtutor*:
 
