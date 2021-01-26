@@ -67,11 +67,11 @@ def emptyfunc(args):
 
 def createHSVTuner():
     cv2.namedWindow("HSV Tunner")
-    cv2.createTrackbar("Hue Min", "HSV Tunner", 0, 179, emptyfunc)
-    cv2.createTrackbar("Hue Max", "HSV Tunner", 179, 179, emptyfunc)
-    cv2.createTrackbar("Sat Min", "HSV Tunner", 0, 255, emptyfunc)
-    cv2.createTrackbar("Sat Max", "HSV Tunner", 255, 255, emptyfunc)
-    cv2.createTrackbar("Val Min", "HSV Tunner", 0, 255, emptyfunc)
+    cv2.createTrackbar("Hue Min", "HSV Tunner", 31, 179, emptyfunc)
+    cv2.createTrackbar("Hue Max", "HSV Tunner", 63, 179, emptyfunc)
+    cv2.createTrackbar("Sat Min", "HSV Tunner", 60, 255, emptyfunc)
+    cv2.createTrackbar("Sat Max", "HSV Tunner", 156, 255, emptyfunc)
+    cv2.createTrackbar("Val Min", "HSV Tunner", 195, 255, emptyfunc)
     cv2.createTrackbar("Val Max", "HSV Tunner", 255, 255, emptyfunc)
 
 def getMaskMatrix():
@@ -89,6 +89,43 @@ def getMaskMatrix():
     upper = np.array([h_max, s_max, v_max])
     return (lower, upper)
 
+def getCenter(points: list):
+    Xs = [ i[:, 0] for i in points]
+    Ys = [ i[:, 1] for i in points]
+    x = sum(Xs)/len(Xs)
+    y = sum(Ys)/len(Ys)
+    return (int(x), int(y))
+
+def getContours(img, coloredImg):
+    img2 = np.copy(coloredImg)
+                                        # Retrieve outermost contours
+                                        # Experiment with other RETR
+    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    for cont in contours:
+        area = cv2.contourArea(cont)
+        # Draw borders
+                                    # To draw all of them (contour index)
+                                        # Color, tickness
+        cv2.drawContours(img2, cont, -1, (155,0,0), 2)
+        
+        # Area threshold, to avoid unwanted figures
+        if area > 200:
+            # Curvelength, aka perimeter
+                                        # If the shapes are closed
+            perimiter = cv2.arcLength(cont, True)
+            # Get corners from shapes as points
+                                                    # Resolution and closed
+            pointsCorner = cv2.approxPolyDP(cont, 0.02*perimiter, True)
+            
+            # totalPoints = len(pointsCorner)
+            # print("La figura tiene:", totalPoints)
+
+            # Draw bounding box
+            x, y, w, h = cv2.boundingRect(pointsCorner)
+            cv2.rectangle(img2, (x,y), (x+w, y+h), (0,0,255), 2)
+            centerX, centerY = getCenter(pointsCorner)
+            cv2.putText(img2, "Center at x:{} y:{}".format(centerX, centerY), (centerX, centerY), cv2.FONT_HERSHEY_COMPLEX, .5, (255,255, 255))
+    return img2
 # Initialice CSI Camera
 capture = cv2.VideoCapture(gstreamer_pipeline(flip_method=0, framerate=30), cv2.CAP_GSTREAMER)
 
@@ -114,8 +151,12 @@ while True:
     # Merge HSV and blurred
     imgRes = cv2.bitwise_and(blured, blured, mask= mask)
 
+    # Find edges:
+    imgCanny = cv2.Canny(imgRes, 50, 50)
+    imgContours = getContours(imgCanny, imgRes)
+
     # Show images:
-    jointImgs = stackImages(.6, ([blured], [imgRes]))
+    jointImgs = stackImages(.6, ([blured], [imgContours]))
     cv2.imshow("Preview", jointImgs)
 
     # Just to wait 1 mlsnd and maybe exit with ESC

@@ -9,15 +9,17 @@ def getContours(img, coloredImg):
     for cont in contours:
         area = cv2.contourArea(cont)
         # Draw borders
-                                    # To draw all of them
+                                    # To draw all of them (contour index)
+                                        # Color, tickness
         cv2.drawContours(img2, cont, -1, (155,0,0), 2)
         
         # Area threshold, to avoid unwanted figures
         if area > 200:
-            # Curveleft
+            # Curvelength, aka perimeter
                                         # If the shapes are closed
             perimiter = cv2.arcLength(cont, True)
             # Get corners from shapes as points
+                                                    # Resolution and closed
             pointsCorner = cv2.approxPolyDP(cont, 0.02*perimiter, True)
             totalPoints = len(pointsCorner)
 
