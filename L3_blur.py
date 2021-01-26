@@ -3,7 +3,7 @@ import numpy as np
 
 img = cv2.imread("imgs/penguins.jpg")
 
-#BLur with Gaussian function
+#Blur with Gaussian function
                                 #KernelSize
                                 # It has to be odd numbers, and both should be the same
 imgBlur = cv2.GaussianBlur(img, (7,7), 0)
