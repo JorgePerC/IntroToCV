@@ -10,7 +10,7 @@ cv2.imshow("WindowName", img)
 
 # Shows the img until the delay (0) in milis has passed
 # However, if the delay is 0, then we have infinite delay
-cv2.waitKey(0);
+cv2.waitKey(0)
 
 #-------------------- SHow video 
 
