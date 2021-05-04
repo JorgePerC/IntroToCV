@@ -11,10 +11,10 @@ So... I'm really new to this.
 - [x] Python, list comprenhension
 - [x] Python, Generators
 - [] Whats a mask
-- [] Whats a kernel
-- [] Whats a cascade. pther methods to detect faces.
+- [x] Whats a kernel
+- [] Whats a cascade. Other methods to detect faces.
 - [] Whats a pipeline, from a reliable source. 
-- [] Color spaces
+- [] Color spaces. Expand with images
 - [] Convolutions
 - [] Filters
 - [] Leonardo Chang
@@ -24,6 +24,7 @@ So... I'm really new to this.
 
 - [] Even more matrix
 - [] Used funcitons (Canny, Gaussian blur , Hanning, etc. )
+    - [x] Gaussian blur.
 
 ## Bibliography
 
@@ -58,6 +59,10 @@ https://0-eds-a-ebscohost-com.biblioteca-ils.tec.mx/eds/detail/detail?vid=0&sid=
 * Prof Octavio's class: https://github.com/octavio-navarro/Vision_2020_02
 
 * YT Playlist of my own: https://youtube.com/playlist?list=PLQ7SND1z6ymNsOQjLyMNt2rYjK15USyin
+
+* Investgation on other algorithms: https://docs.google.com/document/d/1UKzDoNoOcoyp2stpcC5fAXfKvDnrDLAFv32jyNjnzSo/edit?usp=sharing
+
+https://youtube.com/playlist?list=PLd56wE27eBdgXToYHDRTRfA0xEs7qLYI-
 
 
 ## What I learned from *vimtutor*:
